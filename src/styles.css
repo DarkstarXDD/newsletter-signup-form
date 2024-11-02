@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: local("Roboto-Regular"),
+      url("/src/assets/fonts/roboto-v32-latin-regular.woff2");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: local("Roboto-Bold"),
+      url("/src/assets/fonts/roboto-v32-latin-700.woff2");
+  }
+
+  *:focus-visible {
+    outline: 0.125rem dotted green;
+    outline-offset: 0.125rem;
+  }
+}
