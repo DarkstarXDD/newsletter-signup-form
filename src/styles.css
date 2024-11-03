@@ -21,4 +21,8 @@
     outline: 0.125rem dotted green;
     outline-offset: 0.125rem;
   }
+
+  img {
+    @apply w-full;
+  }
 }

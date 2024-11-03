@@ -37,8 +37,124 @@
   </head>
 
   <body
-    class="min-h-dvh flex flex-col justify-center items-center bg-slate-900 font-sans text-gray-200"
+    class="min-h-dvh flex flex-col justify-center items-center md:p-6 bg-navy-pale text-navy-dark font-body text-body"
   >
-    <h1 class="text-3xl">Hello, World!</h1>
+    <main>
+      <div
+        class="max-w-[58rem] grid md:gap-16 md:grid-cols-2 md:items-center md:ps-16 md:pe-6 md:py-6 md:rounded-[2.25rem] bg-white"
+      >
+        <div class="md:col-start-2 md:col-end-2">
+          <picture>
+            <source
+              srcset="/src/assets/images/illustration-sign-up-desktop.svg"
+              media="(min-width: 58rem)"
+            />
+            <img
+              src="/src/assets/images/illustration-sign-up-mobile.svg"
+              alt=""
+            />
+          </picture>
+        </div>
+
+        <div
+          class="grid gap-10 px-6 py-10 md:px-0 md:py-0 md:max-w-96 md:col-start-1 md:col-end-1 md:row-start-1 md:row-end-1"
+        >
+          <div class="grid gap-6">
+            <h1 class="text-heading-mobile md:text-heading-desktop">
+              Stay updated!
+            </h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="grid gap-[0.625rem]">
+              <li class="flex justify-start items-start gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  aria-hidden="true"
+                  focusable="false"
+                  class="size-5"
+                >
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path
+                      stroke="#FFF"
+                      stroke-width="2"
+                      d="M6 11.381 8.735 14 15 8"
+                    />
+                  </g>
+                </svg>
+                Product discovery and building what matters
+              </li>
+              <li class="flex justify-start items-start gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  aria-hidden="true"
+                  focusable="false"
+                  class="size-5"
+                >
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path
+                      stroke="#FFF"
+                      stroke-width="2"
+                      d="M6 11.381 8.735 14 15 8"
+                    />
+                  </g>
+                </svg>
+                Measuring to ensure updates are a success
+              </li>
+              <li class="flex justify-start items-start gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  aria-hidden="true"
+                  focusable="false"
+                  class="size-5"
+                >
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path
+                      stroke="#FFF"
+                      stroke-width="2"
+                      d="M6 11.381 8.735 14 15 8"
+                    />
+                  </g>
+                </svg>
+                And much more!
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <form class="grid gap-2">
+              <div class="flex justify-between items-center text-body-small">
+                <label for="email">Email address</label>
+                <span class="text-vermellion">Valid email required</span>
+              </div>
+              <div class="grid gap-6">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@company.com"
+                  class="border border-grey rounded-lg placeholder:text-grey px-6 py-4 outline-grey text-navy-dark"
+                />
+                <button
+                  class="border-navy-dark rounded-lg outline-navy-dark bg-navy-dark px-6 py-[1.125rem] text-body-bold text-white hover:bg-gradient-to-b from-gradient-start to-gradient-end"
+                >
+                  Subscribe to monthly newsletter
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

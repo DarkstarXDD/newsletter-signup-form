@@ -1,7 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss"
+
 export default {
   content: ["./index.html", "./src/**/*"],
   theme: {
+    screens: {
+      md: "58rem",
+    },
+
     fontFamily: {
       body: ["Roboto", "sans-serif"],
     },
@@ -47,7 +52,13 @@ export default {
         end: "hsl(346, 100%, 66%)",
       },
     },
+
+    extend: {
+      gridTemplateColumns: {
+        "3fr-2fr": "3fr 2fr",
+      },
+    },
   },
   plugins: [],
   corePlugins: { preflight: true }, // Make false to remove the tailwind reset
-}
+} satisfies Config
