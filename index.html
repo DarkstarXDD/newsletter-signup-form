@@ -132,10 +132,14 @@
           </div>
 
           <div>
-            <form class="grid gap-2">
+            <form novalidate id="form" class="grid gap-2">
               <div class="flex justify-between items-center text-body-small">
                 <label for="email">Email address</label>
-                <span class="text-vermellion">Valid email required</span>
+                <span
+                  id="error-container"
+                  aria-live="assertive"
+                  class="text-vermellion"
+                ></span>
               </div>
               <div class="grid gap-6">
                 <input
@@ -143,7 +147,9 @@
                   id="email"
                   name="email"
                   placeholder="email@company.com"
-                  class="border border-grey rounded-lg placeholder:text-grey px-6 py-4 outline-grey text-navy-dark"
+                  aria-invalid="false"
+                  aria-describedby="error-container"
+                  class="border border-grey rounded-lg placeholder:text-grey px-6 py-4 outline-grey text-navy-dark aria-[invalid=true]:border-vermellion aria-[invalid=true]:outline-vermellion"
                 />
                 <button
                   class="border-navy-dark rounded-lg outline-navy-dark bg-navy-dark px-6 py-[1.125rem] text-body-bold text-white hover:bg-gradient-to-b from-gradient-start to-gradient-end"
