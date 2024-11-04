@@ -1,1 +1,0 @@
-og-img and favicon.
