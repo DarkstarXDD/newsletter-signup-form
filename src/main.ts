@@ -5,6 +5,10 @@ let isInputListenerRegistered = false
 const form = document.getElementById("form")
 const emailInput = document.getElementById("email")
 const errorContainer = document.getElementById("error-container")
+const landingScreen = document.getElementById("landing-screen")
+const confirmationScreen = document.getElementById("confirmation-screen")
+const emailPlaceholder = document.getElementById("email-placeholder")
+const dismissButton = document.getElementById("dismiss-button")
 
 function setErrorMessage(errorMessage: string) {
   if (errorContainer) {
@@ -58,18 +62,31 @@ function validate() {
 
 function submitForm() {
   if (emailInput instanceof HTMLInputElement) {
-    // emailInput.value = ""
+    if (emailPlaceholder) {
+      emailPlaceholder.textContent = emailInput.value
+    }
+    emailInput.value = ""
     emailInput.blur()
     emailInput.removeEventListener("input", validate)
+    if (landingScreen && confirmationScreen) {
+      landingScreen.dataset.hidden = "true"
+      confirmationScreen.dataset.hidden = "false"
+    }
   }
 }
 
 form?.addEventListener("submit", (event) => {
+  event.preventDefault()
   validate()
 
   if (!isInputListenerRegistered) {
     submitForm()
-  } else {
-    event.preventDefault()
+  }
+})
+
+dismissButton?.addEventListener("click", () => {
+  if (landingScreen && confirmationScreen) {
+    landingScreen.dataset.hidden = "false"
+    confirmationScreen.dataset.hidden = "true"
   }
 })
