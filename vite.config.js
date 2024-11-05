@@ -1,13 +1,15 @@
-// vite.config.js
+import { fileURLToPath, URL } from "url"
 import { resolve } from "path"
 import { defineConfig } from "vite"
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url))
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve("./", "index.html"),
-        nested: resolve("./", "confirmation.html"),
+        main: resolve(__dirname, "index.html"),
+        nested: resolve(__dirname, "confirmation.html"),
       },
     },
   },
