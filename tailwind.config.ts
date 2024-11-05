@@ -56,9 +56,13 @@ export default {
     extend: {
       gridTemplateColumns: {
         "3fr-2fr": "3fr 2fr",
+        list: "auto 1fr",
       },
     },
   },
   plugins: [],
-  corePlugins: { preflight: true }, // Make false to remove the tailwind reset
+
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 } satisfies Config
