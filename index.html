@@ -37,11 +37,13 @@
   </head>
 
   <body
-    class="min-h-dvh flex flex-col justify-center items-center md:p-6 bg-navy-pale text-navy-dark font-body text-body"
+    class="min-h-dvh flex flex-col justify-center items-center md:p-6 bg-white md:bg-navy-pale text-navy-dark font-body text-body"
   >
     <main>
       <div
-        class="max-w-[58rem] grid md:gap-16 md:grid-cols-2 md:items-center md:ps-16 md:pe-6 md:py-6 md:rounded-[2.25rem] shadow-2xl bg-white"
+        id="landing-screen"
+        data-hidden="false"
+        class="data-[hidden=true]:hidden max-w-[58rem] grid md:gap-16 md:grid-cols-2 md:items-center md:ps-16 md:pe-6 md:py-6 md:rounded-[2.25rem] md:shadow-2xl bg-white"
       >
         <div class="md:col-start-2 md:col-end-2">
           <picture>
@@ -154,6 +156,7 @@
                   placeholder="email@company.com"
                   aria-invalid="false"
                   aria-describedby="error-container"
+                  autocomplete="email"
                   class="border border-grey rounded-lg placeholder:text-grey px-6 py-4 outline-grey text-navy-dark aria-[invalid=true]:border-vermellion aria-[invalid=true]:outline-vermellion"
                 />
                 <button
@@ -165,6 +168,58 @@
             </form>
           </div>
         </div>
+      </div>
+
+      <div
+        id="confirmation-screen"
+        data-hidden="true"
+        aria-live="assertive"
+        class="data-[hidden=true]:hidden max-w-[30.625rem] flex flex-col gap-10 bg-white px-6 py-10 md:shadow-2xl md:max-w-[31.5rem] md:p-16 md:rounded-[2.25rem]"
+      >
+        <div class="flex flex-col gap-6">
+          <div class="grid gap-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="64"
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+              focusable="false"
+              class="size-16"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g>
+            </svg>
+            <h1 class="text-heading-mobile md:text-heading-desktop">
+              Thanks for subscribing!
+            </h1>
+          </div>
+          <p>
+            A confirmation email has been sent to
+            <span id="email-placeholder" class="text-body-bold"
+              >ash@loremcompany.com</span
+            >. Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </div>
+        <button
+          id="dismiss-button"
+          class="border-navy-dark rounded-lg outline-navy-dark bg-navy-dark px-6 py-[1.125rem] text-body-bold text-white hover:bg-gradient-to-b from-gradient-start to-gradient-end"
+        >
+          Dismiss message
+        </button>
       </div>
     </main>
   </body>
