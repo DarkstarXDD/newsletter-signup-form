@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),
-        confirmation: path.resolve(__dirname, "confirmation.html"),
+        confirmation: path.resolve(__dirname, "confirmation/index.html"),
       },
     },
   },
