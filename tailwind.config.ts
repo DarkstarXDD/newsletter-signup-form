@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 
 export default {
-  content: ["./index.html", "./src/**/*"],
+  content: ["./*.html", "./src/**/*"],
   theme: {
     screens: {
       md: "58rem",

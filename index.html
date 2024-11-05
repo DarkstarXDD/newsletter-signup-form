@@ -41,7 +41,7 @@
   >
     <main>
       <div
-        class="max-w-[58rem] grid md:gap-16 md:grid-cols-2 md:items-center md:ps-16 md:pe-6 md:py-6 md:rounded-[2.25rem] bg-white"
+        class="max-w-[58rem] grid md:gap-16 md:grid-cols-2 md:items-center md:ps-16 md:pe-6 md:py-6 md:rounded-[2.25rem] shadow-2xl bg-white"
       >
         <div class="md:col-start-2 md:col-end-2">
           <picture>
@@ -132,7 +132,12 @@
           </div>
 
           <div>
-            <form novalidate id="form" class="grid gap-2">
+            <form
+              novalidate
+              action="/confirmation.html"
+              id="form"
+              class="grid gap-2"
+            >
               <div class="flex justify-between items-center text-body-small">
                 <label for="email">Email address</label>
                 <span

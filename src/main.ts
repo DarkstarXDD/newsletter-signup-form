@@ -72,3 +72,16 @@ form?.addEventListener("submit", (event) => {
     submitForm()
   }
 })
+
+// const url = window.location.href
+// console.log(url)
+
+// const urlObject = new URL(url)
+// const searchParams = urlObject.search
+// console.log(searchParams)
+
+// const urlSearchParamsObject = new URLSearchParams(searchParams)
+// console.log(urlSearchParamsObject)
+
+// const username = urlSearchParamsObject.get("username")
+// console.log(username)
