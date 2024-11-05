@@ -1,15 +1,17 @@
-import { fileURLToPath, URL } from "url"
-import { resolve } from "path"
 import { defineConfig } from "vite"
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url))
+import path from "path"
+import { fileURLToPath } from "url"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        nested: resolve(__dirname, "confirmation.html"),
+        main: path.resolve(__dirname, "index.html"),
+        confirmation: path.resolve(__dirname, "confirmation.html"),
       },
     },
   },
