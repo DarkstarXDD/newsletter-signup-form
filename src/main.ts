@@ -58,30 +58,18 @@ function validate() {
 
 function submitForm() {
   if (emailInput instanceof HTMLInputElement) {
-    emailInput.value = ""
+    // emailInput.value = ""
     emailInput.blur()
     emailInput.removeEventListener("input", validate)
   }
 }
 
 form?.addEventListener("submit", (event) => {
-  event.preventDefault()
   validate()
 
   if (!isInputListenerRegistered) {
     submitForm()
+  } else {
+    event.preventDefault()
   }
 })
-
-// const url = window.location.href
-// console.log(url)
-
-// const urlObject = new URL(url)
-// const searchParams = urlObject.search
-// console.log(searchParams)
-
-// const urlSearchParamsObject = new URLSearchParams(searchParams)
-// console.log(urlSearchParamsObject)
-
-// const username = urlSearchParamsObject.get("username")
-// console.log(username)
