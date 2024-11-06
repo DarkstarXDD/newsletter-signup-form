@@ -1,4 +1,4 @@
-## Frontend Mentor Challenge 14 - Workit Landing Page
+## Frontend Mentor Challenge 24 - Newsletter Sign-up Form with Success Message
 
 This is my solution to the [Newsletter Sign-up Form with Success Message](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv) challenge on [Frontend Mentor](https://www.frontendmentor.io/).
 
